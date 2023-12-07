@@ -69,7 +69,7 @@ public class CheckOutController extends HttpServlet {
         CustomerDAO cusdao = new CustomerDAO();
         
         String id = request.getParameter("id");
-        //hdjswief hư h
+        
         if (id != null && id.matches("\\d+")) {
             int userID = Integer.parseInt(id);
 
