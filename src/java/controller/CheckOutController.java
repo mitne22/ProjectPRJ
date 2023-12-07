@@ -68,10 +68,10 @@ public class CheckOutController extends HttpServlet {
         Account userAccount = (Account) session.getAttribute("acc");
         CustomerDAO cusdao = new CustomerDAO();
         
-        String idParam = request.getParameter("id");
-
-        if (idParam != null && idParam.matches("\\d+")) {
-            int userID = Integer.parseInt(idParam);
+        String id = request.getParameter("id");
+        //hdjswief hư h
+        if (id != null && id.matches("\\d+")) {
+            int userID = Integer.parseInt(id);
 
             if (userAccount != null && userAccount.getuID() == userID) {
                 Customer c = cusdao.getCustomerById(userID);
