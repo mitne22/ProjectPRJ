@@ -43,7 +43,6 @@
                         <li><a class="nav-link" href="shop">Shop</a></li>
                         
                         <li class="active"><a class="nav-link" href="services.jsp">Services</a></li>
-                        <li><a class="nav-link" href="blog.jsp">Blog</a></li>
                         <li><a class="nav-link" href="contact.jsp">Contact us</a></li>
                     </ul>
 
@@ -69,13 +68,13 @@
                     <div class="col-lg-5">
                         <div class="intro-excerpt">
                             <h1>Services</h1>
-                            <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
+                            <p class="mb-4">Furni là địa chỉ đáng tin cậy cho những người yêu thẩm mỹ và đẳng cấp trong lĩnh vực trang sức. Chúng tôi tự hào cung cấp những sản phẩm chất lượng cao, từ những mảnh nghệ thuật tinh tế đến những thiết kế hiện đại, đảm bảo mang đến cho khách hàng trải nghiệm mua sắm không giới hạn.</p>
                             <p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
                         </div>
                     </div>
                     <div class="col-lg-7">
                         <div class="hero-img-wrap">
-                            <img src="images/couch.png" class="img-fluid">
+                            <img src="https://channel.mediacdn.vn/prupload/439/2017/05/img20170507212432011.jpg" height="400px" weight="500px" style="margin-top: 50px; margin-left: 50px">
                         </div>
                     </div>
                 </div>
@@ -83,268 +82,110 @@
         </div>
         <!-- End Hero Section -->
 
-
-
         <!-- Start Why Choose Us Section -->
         <div class="why-choose-section">
             <div class="container">
-
-
-                <div class="row my-5">
-                    <div class="col-6 col-md-6 col-lg-3 mb-4">
-                        <div class="feature">
-                            <div class="icon">
-                                <img src="images/truck.svg" alt="Image" class="imf-fluid">
+                <div class="row justify-content-between">
+                    <div class="col-lg-6">
+                        <h2 class="section-title">Why Choose Us</h2>
+                        <ul>
+                            <li>Chất lượng cao và chế tác tinh tế.</li>
+                            <li>Sự đa dạng về phong cách và dịp kỷ niệm.</li>
+                            <li>Giá cả cạnh tranh.</li>
+                            <li>Tùy chỉnh sản phẩm theo ý muốn.</li>
+                            <li>Dịch vụ khách hàng xuất sắc.</li>
+                            <li>Bảo hành và đảm bảo sản phẩm.</li>
+                            <li>Tuân thủ tiêu chuẩn bền vững</li>
+                        </ul>
+                        <div class="row my-5">
+                            <div class="col-6 col-md-6">
+                                <div class="feature">
+                                    <div class="icon">
+                                        <img src="images/truck.svg" alt="Image" class="imf-fluid">
+                                    </div>
+                                    <h3>Fast &amp; Free Shipping</h3>
+                                    <p></p>
+                                </div>
                             </div>
-                            <h3>Fast &amp; Free Shipping</h3>
-                            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+
+                            <div class="col-6 col-md-6">
+                                <div class="feature">
+                                    <div class="icon">
+                                        <img src="images/bag.svg" alt="Image" class="imf-fluid">
+                                    </div>
+                                    <h3>Easy to Shop</h3>
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-6">
+                                <div class="feature">
+                                    <div class="icon">
+                                        <img src="images/support.svg" alt="Image" class="imf-fluid">
+                                    </div>
+                                    <h3>24/7 Support</h3>
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-6">
+                                <div class="feature">
+                                    <div class="icon">
+                                        <img src="images/return.svg" alt="Image" class="imf-fluid">
+                                    </div>
+                                    <h3>Hassle Free Returns</h3>
+                                    <p></p>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
-                    <div class="col-6 col-md-6 col-lg-3 mb-4">
-                        <div class="feature">
-                            <div class="icon">
-                                <img src="images/bag.svg" alt="Image" class="imf-fluid">
-                            </div>
-                            <h3>Easy to Shop</h3>
-                            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-6 col-lg-3 mb-4">
-                        <div class="feature">
-                            <div class="icon">
-                                <img src="images/support.svg" alt="Image" class="imf-fluid">
-                            </div>
-                            <h3>24/7 Support</h3>
-                            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-6 col-lg-3 mb-4">
-                        <div class="feature">
-                            <div class="icon">
-                                <img src="images/return.svg" alt="Image" class="imf-fluid">
-                            </div>
-                            <h3>Hassle Free Returns</h3>
-                            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-6 col-lg-3 mb-4">
-                        <div class="feature">
-                            <div class="icon">
-                                <img src="images/truck.svg" alt="Image" class="imf-fluid">
-                            </div>
-                            <h3>Fast &amp; Free Shipping</h3>
-                            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-6 col-lg-3 mb-4">
-                        <div class="feature">
-                            <div class="icon">
-                                <img src="images/bag.svg" alt="Image" class="imf-fluid">
-                            </div>
-                            <h3>Easy to Shop</h3>
-                            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-6 col-lg-3 mb-4">
-                        <div class="feature">
-                            <div class="icon">
-                                <img src="images/support.svg" alt="Image" class="imf-fluid">
-                            </div>
-                            <h3>24/7 Support</h3>
-                            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-6 col-lg-3 mb-4">
-                        <div class="feature">
-                            <div class="icon">
-                                <img src="images/return.svg" alt="Image" class="imf-fluid">
-                            </div>
-                            <h3>Hassle Free Returns</h3>
-                            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                    <div class="col-lg-5">
+                        <div class="img-wrap">
+                            <img src="images/home.jpg" alt="Image" class="img-fluid" width="700px">
                         </div>
                     </div>
 
                 </div>
-
             </div>
         </div>
         <!-- End Why Choose Us Section -->
 
-        <!-- Start Product Section -->
-        <div class="product-section pt-0">
+        <!-- Start We Help Section -->
+        <div class="we-help-section">
             <div class="container">
-                <div class="row">
-
-                    <!-- Start Column 1 -->
-                    <div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
-                        <h2 class="mb-4 section-title">Crafted with excellent material.</h2>
-                        <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. </p>
-                        <p><a href="#" class="btn">Explore</a></p>
-                    </div> 
-                    <!-- End Column 1 -->
-
-                    <!-- Start Column 2 -->
-                    <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                        <a class="product-item" href="#">
-                            <img src="images/product-1.png" class="img-fluid product-thumbnail">
-                            <h3 class="product-title">Nordic Chair</h3>
-                            <strong class="product-price">$50.00</strong>
-
-                            <span class="icon-cross">
-                                <img src="images/cross.svg" class="img-fluid">
-                            </span>
-                        </a>
-                    </div> 
-                    <!-- End Column 2 -->
-
-                    <!-- Start Column 3 -->
-                    <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                        <a class="product-item" href="#">
-                            <img src="images/product-2.png" class="img-fluid product-thumbnail">
-                            <h3 class="product-title">Kruzo Aero Chair</h3>
-                            <strong class="product-price">$78.00</strong>
-
-                            <span class="icon-cross">
-                                <img src="images/cross.svg" class="img-fluid">
-                            </span>
-                        </a>
-                    </div>
-                    <!-- End Column 3 -->
-
-                    <!-- Start Column 4 -->
-                    <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                        <a class="product-item" href="#">
-                            <img src="images/product-3.png" class="img-fluid product-thumbnail">
-                            <h3 class="product-title">Ergonomic Chair</h3>
-                            <strong class="product-price">$43.00</strong>
-
-                            <span class="icon-cross">
-                                <img src="images/cross.svg" class="img-fluid">
-                            </span>
-                        </a>
-                    </div>
-                    <!-- End Column 4 -->
-
-                </div>
-            </div>
-        </div>
-        <!-- End Product Section -->
-
-
-
-        <!-- Start Testimonial Slider -->
-        <div class="testimonial-section before-footer-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7 mx-auto text-center">
-                        <h2 class="section-title">Testimonials</h2>
-                    </div>
-                </div>
-
-                <div class="row justify-content-center">
-                    <div class="col-lg-12">
-                        <div class="testimonial-slider-wrap text-center">
-
-                            <div id="testimonial-nav">
-                                <span class="prev" data-controls="prev"><span class="fa fa-chevron-left"></span></span>
-                                <span class="next" data-controls="next"><span class="fa fa-chevron-right"></span></span>
-                            </div>
-
-                            <div class="testimonial-slider">
-
-                                <div class="item">
-                                    <div class="row justify-content-center">
-                                        <div class="col-lg-8 mx-auto">
-
-                                            <div class="testimonial-block text-center">
-                                                <blockquote class="mb-5">
-                                                    <p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
-                                                </blockquote>
-
-                                                <div class="author-info">
-                                                    <div class="author-pic">
-                                                        <img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
-                                                    </div>
-                                                    <h3 class="font-weight-bold">Maria Jones</h3>
-                                                    <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div> 
-                                <!-- END item -->
-
-                                <div class="item">
-                                    <div class="row justify-content-center">
-                                        <div class="col-lg-8 mx-auto">
-
-                                            <div class="testimonial-block text-center">
-                                                <blockquote class="mb-5">
-                                                    <p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
-                                                </blockquote>
-
-                                                <div class="author-info">
-                                                    <div class="author-pic">
-                                                        <img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
-                                                    </div>
-                                                    <h3 class="font-weight-bold">Maria Jones</h3>
-                                                    <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div> 
-                                <!-- END item -->
-
-                                <div class="item">
-                                    <div class="row justify-content-center">
-                                        <div class="col-lg-8 mx-auto">
-
-                                            <div class="testimonial-block text-center">
-                                                <blockquote class="mb-5">
-                                                    <p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
-                                                </blockquote>
-
-                                                <div class="author-info">
-                                                    <div class="author-pic">
-                                                        <img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
-                                                    </div>
-                                                    <h3 class="font-weight-bold">Maria Jones</h3>
-                                                    <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div> 
-                                <!-- END item -->
-
-                            </div>
-
+                <div class="row justify-content-between">
+                    <div class="col-lg-7 mb-5 mb-lg-0">
+                        <div class="imgs-grid">
+                            <div class="grid grid-1"><img src="https://www.junie.vn/cdn/shop/files/day-chuyen-hanne-3.jpg?v=1689739735&width=700" alt="Untree.co"></div>
+                            <div class="grid grid-2"><img src="https://www.junie.vn/cdn/shop/products/Nhan-Lana-6.jpg?v=1677486883&width=700" alt="Untree.co"></div>
+                            <div class="grid grid-3"><img src="https://www.junie.vn/cdn/shop/products/Vong-tay-Cheri-5.jpg?v=1676986002&width=700" alt="Untree.co"></div>
                         </div>
                     </div>
+                    <div class="col-lg-5 ps-lg-5">
+                        <h2 class="section-title mb-4">Chính Sách Bảo Hành</h2>
+                        <p>Furni cam kết bảo hành đúng, chuẩn theo những quy định được đặt ra và giao dịch đối với khách hàng.</p>
+
+                        <ul class="list-unstyled custom-list my-4">
+                            <li>Bảo hành vệ sinh & đánh sáng miễn phí vô thời hạn đối với sản phẩm bạc nguyên chất 92.5% không xi mạ.</li>
+                            <li>Bảo hành khoá (khoá tròn) sản phẩm trong vòng 3 tháng đối với tất cả sản phẩm.</li>
+                            <li>Không bảo hành đối với trường hợp đứt, gãy dây và nhẫn. Phí sửa chữa từ 20.000đ - 80.000đ/ lần/ sản phẩm.</li>
+                            <li>Không bảo hành với sản phẩm có đính đá, phí gắn lại tuỳ theo kích thước viên đá và số lượng đá.</li>
+                        </ul>
+                        <p><a href="shop" class="btn">Explore</a></p>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- End Testimonial Slider -->
-
-
-
+        <!-- End We Help Section -->
+        
         <!-- Start Footer Section -->
         <footer class="footer-section">
             <div class="container relative">
 
                 <div class="sofa-img">
-                    <img src="images/sofa.png" alt="Image" class="img-fluid">
+                    <img src="https://hoangphucphoto.com/wp-content/uploads/2023/10/boi-canh-chup-ts.png" alt="Image" class="img-fluid">
                 </div>
 
                 <div class="row">
@@ -373,7 +214,7 @@
                 <div class="row g-5 mb-5">
                     <div class="col-lg-4">
                         <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Furni<span>.</span></a></div>
-                        <p class="mb-4">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant</p>
+                        <p class="mb-4">Furni không chỉ đơn giản là một cửa hàng trang sức, mà là một trải nghiệm mua sắm đẳng cấp. Chúng tôi tự hào mang đến cho khách hàng không gian sang trọng và phòng trưng bày trang sức tinh tế, nơi mà từng sản phẩm đều là một tác phẩm nghệ thuật riêng biệt.</p>
 
                         <ul class="list-unstyled custom-social">
                             <li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>

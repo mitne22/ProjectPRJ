@@ -43,7 +43,6 @@
                         <li><a class="nav-link" href="shop">Shop</a></li>
                     
                         <li><a class="nav-link" href="services.jsp">Services</a></li>
-                        <li><a class="nav-link" href="blog.jsp">Blog</a></li>
                         <li><a class="nav-link" href="contact.jsp">Contact us</a></li>
                     </ul>
                     

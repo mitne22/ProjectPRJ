@@ -35,6 +35,20 @@
             display: block;
             margin: 0 auto;
         }
+        .intro{
+            margin-top: 50px;
+        }
+        .intro ul{
+            margin-top: 50px;
+        }
+        .intro li{
+            margin-top: 20px;
+            font-style: italic;
+        }
+        .product-section{
+            padding-bottom: 0px;
+        }
+        
     </style>
     <body>
         <!-- Start Header/Navigation -->
@@ -53,9 +67,8 @@
                             <a class="nav-link" href="home.jsp">Home</a>
                         </li>
                         <li><a class="nav-link" href="shop">Shop</a></li>
-                     
+
                         <li><a class="nav-link" href="services.jsp">Services</a></li>
-                        <li><a class="nav-link" href="blog.jsp">Blog</a></li>
                         <li><a class="nav-link" href="contact.jsp">Contact us</a></li>
                     </ul>
 
@@ -99,6 +112,23 @@
             </div>
         </div>
         <!-- End Hero Section -->
+        
+        <!-- Start Introduction Section -->
+        <div class="container">
+                <ul class="intro">
+                    <li>Sản Phẩm:
+                Với đội ngũ nghệ nhân và thiết kế tài năng, Furni mang đến cho bạn bộ sưu tập đa dạng từ những chiếc vòng cổ lộng lẫy, những chiếc nhẫn đẳng cấp đến những chiếc bảng điều khiển tinh tế. Tất cả đều được chế tác từ những nguyên liệu chất lượng nhất và thiết kế với sự tận tâm cao nhất.</li>
+                    <li>Chất Lượng và Uy Tín:
+                Chúng tôi cam kết về chất lượng và uy tín trong từng sản phẩm. Mỗi chiếc trang sức tại Furni là sự kết hợp hoàn hảo giữa nghệ thuật và chất lượng vật liệu, đảm bảo mang lại cho khách hàng không gian mua sắm an tâm và hài lòng.</li>
+                    <li>Dịch Vụ Chăm sóc Khách Hàng:
+                Chúng tôi luôn lắng nghe và đáp ứng mọi nhu cầu của khách hàng. Dịch vụ chăm sóc khách hàng của chúng tôi không chỉ là một dịch vụ, mà là sự chia sẻ đam mê và sự hiểu biết sâu rộng về trang sức.</li>
+                    <li>Giao Hàng và Đổi Trả:
+                Furni cam kết đưa sản phẩm đến tận tay bạn một cách an toàn và nhanh chóng. Chính sách đổi trả linh hoạt giúp bạn yên tâm khi chọn lựa trang sức phù hợp với phong cách của mình.</li>
+                </ul>
+                
+                <h6> Hãy đến với Furni, nơi mà từng mảnh trang sức không chỉ là vật dụng trang trí, mà còn là biểu tượng của phong cách và cái đẹp đích thực.</h6>
+        </div>
+        <!-- End Introduction Section -->
 
         <!-- Start Product Section -->
         <div class="product-section">
@@ -153,313 +183,9 @@
 
         <!-- End Product Section -->
 
-        <!-- Start Why Choose Us Section -->
-        <div class="why-choose-section">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-lg-6">
-                        <h2 class="section-title">Why Choose Us</h2>
-                        <ul>
-                            <li>Chất lượng cao và chế tác tinh tế.</li>
-                            <li>Sự đa dạng về phong cách và dịp kỷ niệm.</li>
-                            <li>Giá cả cạnh tranh.</li>
-                            <li>Tùy chỉnh sản phẩm theo ý muốn.</li>
-                            <li>Dịch vụ khách hàng xuất sắc.</li>
-                            <li>Bảo hành và đảm bảo sản phẩm.</li>
-                            <li>Tuân thủ tiêu chuẩn bền vững</li>
-                        </ul>
-                        <div class="row my-5">
-                            <div class="col-6 col-md-6">
-                                <div class="feature">
-                                    <div class="icon">
-                                        <img src="images/truck.svg" alt="Image" class="imf-fluid">
-                                    </div>
-                                    <h3>Fast &amp; Free Shipping</h3>
-                                    <p></p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-6">
-                                <div class="feature">
-                                    <div class="icon">
-                                        <img src="images/bag.svg" alt="Image" class="imf-fluid">
-                                    </div>
-                                    <h3>Easy to Shop</h3>
-                                    <p></p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-6">
-                                <div class="feature">
-                                    <div class="icon">
-                                        <img src="images/support.svg" alt="Image" class="imf-fluid">
-                                    </div>
-                                    <h3>24/7 Support</h3>
-                                    <p></p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-6">
-                                <div class="feature">
-                                    <div class="icon">
-                                        <img src="images/return.svg" alt="Image" class="imf-fluid">
-                                    </div>
-                                    <h3>Hassle Free Returns</h3>
-                                    <p></p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-lg-5">
-                        <div class="img-wrap">
-                            <img src="images/home.jpg" alt="Image" class="img-fluid" width="700px">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!-- End Why Choose Us Section -->
-
-        <!-- Start We Help Section -->
-        <div class="we-help-section">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-lg-7 mb-5 mb-lg-0">
-                        <div class="imgs-grid">
-                            <div class="grid grid-1"><img src="https://www.junie.vn/cdn/shop/files/day-chuyen-hanne-3.jpg?v=1689739735&width=700" alt="Untree.co"></div>
-                            <div class="grid grid-2"><img src="https://www.junie.vn/cdn/shop/products/Nhan-Lana-6.jpg?v=1677486883&width=700" alt="Untree.co"></div>
-                            <div class="grid grid-3"><img src="https://www.junie.vn/cdn/shop/products/Vong-tay-Cheri-5.jpg?v=1676986002&width=700" alt="Untree.co"></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 ps-lg-5">
-                        <h2 class="section-title mb-4">Chính Sách Bảo Hành</h2>
-                        <p>Furni cam kết bảo hành đúng, chuẩn theo những quy định được đặt ra và giao dịch đối với khách hàng.</p>
-
-                        <ul class="list-unstyled custom-list my-4">
-                            <li>Bảo hành vệ sinh & đánh sáng miễn phí vô thời hạn đối với sản phẩm bạc nguyên chất 92.5% không xi mạ.</li>
-                            <li>Bảo hành khoá (khoá tròn) sản phẩm trong vòng 3 tháng đối với tất cả sản phẩm.</li>
-                            <li>Không bảo hành đối với trường hợp đứt, gãy dây và nhẫn. Phí sửa chữa từ 20.000đ - 80.000đ/ lần/ sản phẩm.</li>
-                            <li>Không bảo hành với sản phẩm có đính đá, phí gắn lại tuỳ theo kích thước viên đá và số lượng đá.</li>
-                        </ul>
-                        <p><a href="shop" class="btn">Explore</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End We Help Section -->
-
-        <!-- Start Popular Product -->
-        <div class="popular-product">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-                        <div class="product-item-sm d-flex">
-                            <div class="thumbnail">
-                                <img src="images/product-1.png" alt="Image" class="img-fluid">
-                            </div>
-                            <div class="pt-3">
-                                <h3>Nordic Chair</h3>
-                                <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
-                                <p><a href="#">Read More</a></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-                        <div class="product-item-sm d-flex">
-                            <div class="thumbnail">
-                                <img src="images/product-2.png" alt="Image" class="img-fluid">
-                            </div>
-                            <div class="pt-3">
-                                <h3>Kruzo Aero Chair</h3>
-                                <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
-                                <p><a href="#">Read More</a></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-                        <div class="product-item-sm d-flex">
-                            <div class="thumbnail">
-                                <img src="images/product-3.png" alt="Image" class="img-fluid">
-                            </div>
-                            <div class="pt-3">
-                                <h3>Ergonomic Chair</h3>
-                                <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
-                                <p><a href="#">Read More</a></p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!-- End Popular Product -->
-
-        <!-- Start Testimonial Slider -->
-        <div class="testimonial-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7 mx-auto text-center">
-                        <h2 class="section-title">Testimonials</h2>
-                    </div>
-                </div>
-
-                <div class="row justify-content-center">
-                    <div class="col-lg-12">
-                        <div class="testimonial-slider-wrap text-center">
-
-                            <div id="testimonial-nav">
-                                <span class="prev" data-controls="prev"><span class="fa fa-chevron-left"></span></span>
-                                <span class="next" data-controls="next"><span class="fa fa-chevron-right"></span></span>
-                            </div>
-
-                            <div class="testimonial-slider">
-
-                                <div class="item">
-                                    <div class="row justify-content-center">
-                                        <div class="col-lg-8 mx-auto">
-
-                                            <div class="testimonial-block text-center">
-                                                <blockquote class="mb-5">
-                                                    <p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
-                                                </blockquote>
-
-                                                <div class="author-info">
-                                                    <div class="author-pic">
-                                                        <img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
-                                                    </div>
-                                                    <h3 class="font-weight-bold">Maria Jones</h3>
-                                                    <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div> 
-                                <!-- END item -->
-
-                                <div class="item">
-                                    <div class="row justify-content-center">
-                                        <div class="col-lg-8 mx-auto">
-
-                                            <div class="testimonial-block text-center">
-                                                <blockquote class="mb-5">
-                                                    <p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
-                                                </blockquote>
-
-                                                <div class="author-info">
-                                                    <div class="author-pic">
-                                                        <img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
-                                                    </div>
-                                                    <h3 class="font-weight-bold">Maria Jones</h3>
-                                                    <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div> 
-                                <!-- END item -->
-
-                                <div class="item">
-                                    <div class="row justify-content-center">
-                                        <div class="col-lg-8 mx-auto">
-
-                                            <div class="testimonial-block text-center">
-                                                <blockquote class="mb-5">
-                                                    <p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
-                                                </blockquote>
-
-                                                <div class="author-info">
-                                                    <div class="author-pic">
-                                                        <img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
-                                                    </div>
-                                                    <h3 class="font-weight-bold">Maria Jones</h3>
-                                                    <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div> 
-                                <!-- END item -->
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Testimonial Slider -->
-
-        <!-- Start Blog Section -->
-        <div class="blog-section">
-            <div class="container">
-                <div class="row mb-5">
-                    <div class="col-md-6">
-                        <h2 class="section-title">Recent Blog</h2>
-                    </div>
-                    <div class="col-md-6 text-start text-md-end">
-                        <a href="#" class="more">View All Posts</a>
-                    </div>
-                </div>
-
-                <div class="row">
-
-                    <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
-                        <div class="post-entry">
-                            <a href="#" class="post-thumbnail"><img src="images/post-1.jpg" alt="Image" class="img-fluid"></a>
-                            <div class="post-content-entry">
-                                <h3><a href="#">First Time Home Owner Ideas</a></h3>
-                                <div class="meta">
-                                    <span>by <a href="#">Kristin Watson</a></span> <span>on <a href="#">Dec 19, 2021</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
-                        <div class="post-entry">
-                            <a href="#" class="post-thumbnail"><img src="images/post-2.jpg" alt="Image" class="img-fluid"></a>
-                            <div class="post-content-entry">
-                                <h3><a href="#">How To Keep Your Furniture Clean</a></h3>
-                                <div class="meta">
-                                    <span>by <a href="#">Robert Fox</a></span> <span>on <a href="#">Dec 15, 2021</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
-                        <div class="post-entry">
-                            <a href="#" class="post-thumbnail"><img src="images/post-3.jpg" alt="Image" class="img-fluid"></a>
-                            <div class="post-content-entry">
-                                <h3><a href="#">Small Space Furniture Apartment Ideas</a></h3>
-                                <div class="meta">
-                                    <span>by <a href="#">Kristin Watson</a></span> <span>on <a href="#">Dec 12, 2021</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!-- End Blog Section -->	
-
         <!-- Start Footer Section -->
         <footer class="footer-section">
             <div class="container relative">
-
-                <div class="sofa-img">
-                    <img src="images/sofa.png" alt="Image" class="img-fluid">
-                </div>
 
                 <div class="row">
                     <div class="col-lg-8">
@@ -487,7 +213,7 @@
                 <div class="row g-5 mb-5">
                     <div class="col-lg-4">
                         <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Furni<span>.</span></a></div>
-                        <p class="mb-4">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant</p>
+                        <p class="mb-4">Furni không chỉ đơn giản là một cửa hàng trang sức, mà là một trải nghiệm mua sắm đẳng cấp. Chúng tôi tự hào mang đến cho khách hàng không gian sang trọng và phòng trưng bày trang sức tinh tế, nơi mà từng sản phẩm đều là một tác phẩm nghệ thuật riêng biệt.</p>
 
                         <ul class="list-unstyled custom-social">
                             <li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>

@@ -61,12 +61,10 @@ public class LoadProfileController extends HttpServlet {
         Account userAccount = (Account) session.getAttribute("acc");
         CustomerDAO cusdao = new CustomerDAO();
 
-        // Lấy giá trị của tham số "id" từ URL
-        String idParam = request.getParameter("id");
+        String id = request.getParameter("id");
 
-        // Kiểm tra xem có tham số "id" trong URL không rỗng và là một số nguyên hợp lệ
-        if (idParam != null && idParam.matches("\\d+")) {
-            int userID = Integer.parseInt(idParam);
+        if (id != null && id.matches("\\d+")) {
+            int userID = Integer.parseInt(id);
 
             if (userAccount != null && userAccount.getuID() == userID) {
                 Customer c = cusdao.getCustomerById(userID);

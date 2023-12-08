@@ -135,7 +135,6 @@
                         <li class="active"><a class="nav-link" href="shop">Shop</a></li>
                       
                         <li><a class="nav-link" href="services.jsp">Services</a></li>
-                        <li><a class="nav-link" href="blog.jsp">Blog</a></li>
                         <li><a class="nav-link" href="contact.jsp">Contact us</a></li>
                     </ul>
 
@@ -291,7 +290,7 @@
             <div class="row g-5 mb-5">
                 <div class="col-lg-4">
                     <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Furni<span>.</span></a></div>
-                    <p class="mb-4">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant</p>
+                    <p class="mb-4">Furni không chỉ đơn giản là một cửa hàng trang sức, mà là một trải nghiệm mua sắm đẳng cấp. Chúng tôi tự hào mang đến cho khách hàng không gian sang trọng và phòng trưng bày trang sức tinh tế, nơi mà từng sản phẩm đều là một tác phẩm nghệ thuật riêng biệt.</p>
 
                     <ul class="list-unstyled custom-social">
                         <li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>

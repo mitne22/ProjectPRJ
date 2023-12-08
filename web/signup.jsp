@@ -4,6 +4,7 @@
     Author     : ADMIN
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +17,6 @@
         <link rel="stylesheet" href="/style.css">
         <title>Register Form</title>
         <style>
-            /* Thiết lập font và màu chung cho trang */
             body {
                 font-family: Arial, sans-serif;
                 background-color: #f4f4f4;
@@ -24,7 +24,6 @@
                 padding: 0;
             }
 
-            /* Định dạng phần container chính */
             #logreg-forms {
                 text-align: center;
                 margin: 50px auto;
@@ -35,12 +34,10 @@
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             }
 
-            /* Định dạng tiêu đề Sign up */
             .form-signup h2 {
                 color: #333;
             }
 
-            /* Định dạng nút xã hội (Facebook và Google) */
             .social-login button {
                 width:210px !important;
                 margin: 0 auto;
@@ -51,23 +48,19 @@
                 cursor: pointer;
             }
 
-            /* Định dạng nút Facebook (màu xanh đậm) */
             .facebook-btn {
                 background-color: #3C589C;
             }
 
-            /* Định dạng nút Google (màu đỏ) */
             .google-btn {
                 background-color: #DF4B3B;
             }
 
-            /* Định dạng ký tự OR */
             .social-login p {
                 font-weight: bold;
                 margin: 10px 0;
             }
 
-            /* Định dạng trường nhập và nút Sign Up */
             .form-signup input {
                 width: 100%;
                 padding: 10px;
@@ -76,7 +69,6 @@
                 border-radius: 3px;
             }
 
-            /* Định dạng nút Sign Up */
             .signup{
                 background-color: #218838;
                 color: #fff;
@@ -84,16 +76,14 @@
                 cursor: pointer;
             }
 
-            /* Định dạng thông báo lỗi (được hiển thị bằng ${fail}) */
-            .mess {
-                background-color: papayawhip;
-                color: red;
+            .alert {
+                background-color: #D7F6BD;
+                color: green;
                 margin-bottom: 3%;
                 text-align: center;
                 border-radius: 3px;
             }
 
-            /* Định dạng nút Back */
             #cancel_signup {
                 display: block;
                 margin-top: 10px;
@@ -104,6 +94,7 @@
         </style>
     </head>
     <body>
+   
         <div id="logreg-forms">
             <form action="signup" method="post" class="form-signup">
                 <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign up</h1>
@@ -116,10 +107,17 @@
                 <input name="pass" type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
                 <input name="repass" type="password" id="user-repeatpass" class="form-control" placeholder="Repeat Password" required autofocus="">
                 <button class="btn btn-primary btn-block signup" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
-                <div class="mess">${fail}</div>
-                <div class="mess">${success}</div>
+                
+                <c:if test="${not empty fail}">
+                    <div class="alert alert-danger" role="alert">${fail}</div>
+                </c:if>
+                
+                <c:if test="${not empty success}">
+                    <div class="alert alert-success" role="alert">${success}</div>
+                </c:if>
                 <a href="login.jsp" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
             </form>
         </div>
     </body>
+
 </html>

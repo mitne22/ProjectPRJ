@@ -125,7 +125,7 @@
                 box-shadow: 0 0 5px #ddd;
 
             }
-            
+
             .product-item {
                 text-align: center;
             }
@@ -157,7 +157,7 @@
             <input type="number" name="quantity" placeholder="Quantity" required>
             <input class="add" type="submit" value = "Add Product">
         </form>
-        
+
         <table>
             <tr>
                 <th>ID</th>
@@ -166,7 +166,7 @@
                 <th>Image</th>
                 <th>Title</th>
                 <th>Description</th>
-                <th>Categories ID</th>
+                <th>Categories</th>
                 <th>Quantity</th>
             </tr>
 
@@ -178,7 +178,13 @@
                     <td><img src="${p.image}" class="img-fluid product-thumbnail product-item" ></td>
                     <td>${p.title}</td>
                     <td>${p.description}</td>
-                    <td>${p.cID}</td>
+                    <td>
+                        <c:forEach items="${categories}" var="c">
+                            <c:if test="${p.cID eq c.cID}">
+                                ${c.cName}
+                            </c:if>
+                        </c:forEach>
+                    </td>
                     <td>${p.quantity}</td>
                     <td>
                         <a href="load?pID=${p.pID}"><img src="https://banner2.cleanpng.com/20180417/eeq/kisspng-computer-icons-editing-icon-design-random-icons-5ad5ac7df28c06.7497951515239527659935.jpg" width="15px" height="15px" alt="alt"/></a>
@@ -188,26 +194,6 @@
             </c:forEach>
         </table>
 
-        <canvas id="salesChart"></canvas>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script>
-            var labels = ${chartLabels}; // Replace with your actual chart data
-            var data = ${chartData};     // Replace with your actual chart data
-            var ctx = document.getElementById('salesChart').getContext('2d');
-            var myChart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: labels,
-                    datasets: [{
-                            label: 'Revenue',
-                            data: data,
-                            fill: false,
-                            borderColor: 'rgb(75, 192, 192)',
-                            tension: 0.1
-                        }]
-                }
-            });
-        </script>
     </body>
 </html>
 

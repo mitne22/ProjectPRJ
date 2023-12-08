@@ -47,7 +47,7 @@
                         <li><a class="nav-link" href="shop">Shop</a></li>
                         
                         <li><a class="nav-link" href="services.jsp">Services</a></li>
-                        <li><a class="nav-link" href="blog.jsp">Blog</a></li>
+                       
                         <li class="active"><a class="nav-link" href="contact.jsp">Contact us</a></li>
                     </ul>
 
@@ -73,13 +73,13 @@
                     <div class="col-lg-5">
                         <div class="intro-excerpt">
                             <h1>Contact</h1>
-                            <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
-                            <p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
+                            <p class="mb-4">Dễ dàng kết nối với chúng tôi để biết thêm thông tin hoặc đề xuất hợp tác.</p>
+                            <p><a href="shop" class="btn btn-secondary me-2">Shop Now</a></p>
                         </div>
                     </div>
                     <div class="col-lg-7">
                         <div class="hero-img-wrap">
-                            <img src="images/couch.png" class="img-fluid">
+                            <img src="https://cdn.pnj.io/images/thumbnails/485/485/detailed/141/SCXMXMW060045-SBXMXMW060068-SLXMXMW060047.png" class="img-fluid">
                         </div>
                     </div>
                 </div>
@@ -122,7 +122,7 @@
                                             </svg>
                                         </div> <!-- /.icon -->
                                         <div class="service-contents">
-                                            <p>mitne22072003@gmail.com</p>
+                                            <p>furni@gmail.com</p>
                                         </div> <!-- /.service-contents-->
                                     </div> <!-- /.service -->
                                 </div>
@@ -141,7 +141,7 @@
                                 </div>
                             </div>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.0594075313776!2d105.52389071516304!3d21.012505192544915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abc60e7d3f19%3A0x2be9d7d0b5abcbf4!2sFPT%20University%2C%20Hanoi%20Campus!5e0!3m2!1sen!2sbd!4v1570213740685!5m2!1sen!2sbd" height="500" width="800" style="border:0;" allowfullscreen=""></iframe>
-
+                            
                             <form action="sendMail" method="post">
                                 <div class="row">
                                     <div class="col-6">
@@ -191,7 +191,7 @@
         <div class="container relative">
 
             <div class="sofa-img">
-                <img src="images/sofa.png" alt="Image" class="img-fluid">
+                <img src="https://hoangphucphoto.com/wp-content/uploads/2023/10/anh-ts-sang.jpg" alt="Image" class="img-fluid">
             </div>
 
             <div class="row">
@@ -220,7 +220,7 @@
             <div class="row g-5 mb-5">
                 <div class="col-lg-4">
                     <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Furni<span>.</span></a></div>
-                    <p class="mb-4">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant</p>
+                    <p class="mb-4">Furni không chỉ đơn giản là một cửa hàng trang sức, mà là một trải nghiệm mua sắm đẳng cấp. Chúng tôi tự hào mang đến cho khách hàng không gian sang trọng và phòng trưng bày trang sức tinh tế, nơi mà từng sản phẩm đều là một tác phẩm nghệ thuật riêng biệt.</p>
 
                     <ul class="list-unstyled custom-social">
                         <li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>

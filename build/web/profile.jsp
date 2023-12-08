@@ -22,7 +22,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
         <link href="css/tiny-slider.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
-        <title>Product Management</title>
+        <title>Profile</title>
         <style>
             /* Reset some default browser styles */
             body, h1, h2, p {
@@ -137,28 +137,42 @@
                 margin: 0 auto;
             }
 
-            .mess{
-                background-color: papayawhip;
-                color: red;
+            .alert {
+                background-color: #D7F6BD;
+                color: green;
                 margin-bottom: 3%;
                 text-align: center;
                 border-radius: 3px;
-
+            }
+            .back{
+                background-color: #3B5D50;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-style: italic;
             }
         </style>
     </head>
     <body>
         <h1>Update Profile</h1>
-        <form action="updateProfile" method="post">
+        <form action="updateProfile" method="">
             <input type="text" name="id" value="${pro.customerID}" placeholder="CustomerID" readonly required>
-            <input type="text" name="name" value="${pro.fullName}" placeholder="Your Name" required>
+            <input type="text" name="name" value="${pro.fullName}" placeholder="Your Name" required">
             <input type="text" name="email" value="${pro.email}" placeholder="Email" required>
+            <c:if test="${not empty fail}">
+                <div class="alert alert-danger" role="alert">${fail}</div>
+            </c:if>
             <input type="number" name="phoneNumber" value="${pro.phoneNumber}" placeholder="Phone Number" required>
             <input type="text" name="address" value="${pro.address}" placeholder="Address" required>
             <input class="add" type="submit" value="Update Profile">
+            <c:if test="${not empty mess}">
+                <div class="alert alert-danger" role="alert">${mess}</div>
+            </c:if>
             
         </form>
-
+        <a href="home" class="back">Back to Home</a>    
     </body>
 </html>
 

@@ -138,7 +138,6 @@
                         <li class="active"><a class="nav-link" href="shop">Shop</a></li>
 
                         <li><a class="nav-link" href="services.jsp">Services</a></li>
-                        <li><a class="nav-link" href="blog.jsp">Blog</a></li>
                         <li><a class="nav-link" href="contact.jsp">Contact us</a></li>
                     </ul>
 
@@ -195,7 +194,7 @@
                     </div>
                     <div class="col-lg-6">
 
-                        <div class="product-content">
+                        <div class="product-content text-black">
 
                             <h2>${product.title}</h2>
                             <div class="pc-meta">
@@ -213,7 +212,7 @@
                             <ul class="tags">
                                 <c:forEach items="${cate}" var="c">
                                     <c:if test="${c.cID eq product.cID}">
-                                        <li><span>Category :</span>${c.getcName()}</li>
+                                        <li><span>Category : </span>${c.getcName()}</li>
                                         </c:if>
                                     </c:forEach>
 
