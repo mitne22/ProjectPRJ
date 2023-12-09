@@ -38,7 +38,7 @@ public class CheckOutController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try ( PrintWriter out = response.getWriter()) {
+        try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -67,12 +67,16 @@ public class CheckOutController extends HttpServlet {
         HttpSession session = request.getSession();
         Account userAccount = (Account) session.getAttribute("acc");
         CustomerDAO cusdao = new CustomerDAO();
-        
+
         String id = request.getParameter("id");
-        
+        String fullName = request.getParameter("c_fname");
+        String phoneNumber = request.getParameter("c_companyname");
+        String address = request.getParameter("c_address");
+        String email = request.getParameter("c_email_address");
+
         if (id != null && id.matches("\\d+")) {
             int userID = Integer.parseInt(id);
-
+            
             if (userAccount != null && userAccount.getuID() == userID) {
                 Customer c = cusdao.getCustomerById(userID);
                 request.setAttribute("pro", c);
@@ -83,7 +87,7 @@ public class CheckOutController extends HttpServlet {
         } else {
             //response.sendRedirect("login.jsp");
         }
-        
+
         String username = (String) session.getAttribute("user");
 
         HashMap<String, HashMap<Integer, Cart>> userCarts = (HashMap<String, HashMap<Integer, Cart>>) session.getAttribute("userCarts");
@@ -106,8 +110,8 @@ public class CheckOutController extends HttpServlet {
             request.setAttribute("dao", dao);
             request.setAttribute("cart", cartMap);
         } else {
-            
-            request.setAttribute("totalMoney", 0); 
+
+            request.setAttribute("totalMoney", 0);
             request.setAttribute("dao", new ProductDAO());
             request.setAttribute("cart", new HashMap<Integer, Cart>());
         }
@@ -127,7 +131,7 @@ public class CheckOutController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
+
     }
 
     /**

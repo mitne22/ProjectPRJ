@@ -129,23 +129,6 @@
 
                         <div class="row mb-5">
                             <div class="col-md-12">
-                                <h2 class="h3 mb-3 text-black">Coupon Code</h2>
-                                <div class="p-3 p-lg-5 border bg-white">
-
-                                    <label for="c_code" class="text-black mb-3">Enter your coupon code if you have one</label>
-                                    <div class="input-group w-75 couponcode-wrap">
-                                        <input type="text" class="form-control me-2" id="c_code" placeholder="Coupon Code" aria-label="Coupon Code" aria-describedby="button-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-black btn-sm" type="button" id="button-addon2">Apply</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row mb-5">
-                            <div class="col-md-12">
                                 <h2 class="h3 mb-3 text-black">Your Order</h2>
                                 <div class="p-3 p-lg-5 border bg-white">
                                     <table class="table site-block-order-table mb-5">
@@ -221,7 +204,7 @@
             <div class="container relative">
 
                 <div class="sofa-img">
-                    <img src="images/sofa.png" alt="Image" class="img-fluid">
+                    <img src="https://eropi.com/media/wysiwyg/bo-trang-suc-5/bo-trang-suc-bac-the-paper-fan_1_.JPG" alt="Image" class="img-fluid">
                 </div>
 
                 <div class="row">
@@ -250,7 +233,7 @@
                 <div class="row g-5 mb-5">
                     <div class="col-lg-4">
                         <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Furni<span>.</span></a></div>
-                        <p class="mb-4">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant</p>
+                        <p class="mb-4">Furni không chỉ đơn giản là một cửa hàng trang sức, mà là một trải nghiệm mua sắm đẳng cấp. Chúng tôi tự hào mang đến cho khách hàng không gian sang trọng và phòng trưng bày trang sức tinh tế, nơi mà từng sản phẩm đều là một tác phẩm nghệ thuật riêng biệt.</p></p>
 
                         <ul class="list-unstyled custom-social">
                             <li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>

@@ -93,31 +93,56 @@
 
         </style>
     </head>
-    <body>
-   
-        <div id="logreg-forms">
-            <form action="signup" method="post" class="form-signup">
-                <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign up</h1>
-                <div class="social-login">
-                    <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign up with Facebook</span> </button>
-                    <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign up with Google+</span> </button>
+
+    <body style="background-color: #3B5D50">
+
+        <div class="container">
+
+            <!-- Outer Row -->
+            <div class="row justify-content-center">
+
+                <div class="col-xl-10 col-lg-12 col-md-9">
+
+                    <div class="card o-hidden border-0 shadow-lg my-5">
+                        <div class="card-body p-0">
+                            <!-- Nested Row within Card Body -->
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <img src="https://www.junie.vn/cdn/shop/products/Nhan-Leaf-thuong-hieu-junie-4.jpg?v=1671749593&width=700" alt="Image" class="img-fluid">
+                                </div>
+                                <div class="col-lg-6">
+                                    <div id="logreg-forms">
+                                        <form action="signup" method="post" class="form-signup">
+                                            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign up</h1>
+                                            <div class="social-login">
+                                                <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign up with Facebook</span> </button>
+                                                <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign up with Google+</span> </button>
+                                            </div>
+                                            <p style="text-align:center">OR</p>
+                                            <input name="user" type="text" id="user-name" class="form-control" placeholder="Username" required="" autofocus="">
+                                            <input name="pass" type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
+                                            <input name="repass" type="password" id="user-repeatpass" class="form-control" placeholder="Repeat Password" required autofocus="">
+                                            <button class="btn btn-primary btn-block signup" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
+
+                                            <c:if test="${not empty fail}">
+                                                <div class="alert alert-danger" role="alert">${fail}</div>
+                                            </c:if>
+
+                                            <c:if test="${not empty success}">
+                                                <div class="alert alert-success" role="alert">${success}</div>
+                                            </c:if>
+                                            <a href="login.jsp" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <p style="text-align:center">OR</p>
-                <input name="user" type="text" id="user-name" class="form-control" placeholder="Username" required="" autofocus="">
-                <input name="pass" type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
-                <input name="repass" type="password" id="user-repeatpass" class="form-control" placeholder="Repeat Password" required autofocus="">
-                <button class="btn btn-primary btn-block signup" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
-                
-                <c:if test="${not empty fail}">
-                    <div class="alert alert-danger" role="alert">${fail}</div>
-                </c:if>
-                
-                <c:if test="${not empty success}">
-                    <div class="alert alert-success" role="alert">${success}</div>
-                </c:if>
-                <a href="login.jsp" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
-            </form>
+
+            </div>
+
         </div>
     </body>
-
 </html>

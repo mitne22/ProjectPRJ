@@ -149,24 +149,50 @@
         </style>
 
     </head>
-    <body>
-        <div id="logreg-forms">
-            <form class="form-signin" action="login" method="post">
-                <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
-                <div class="social-login">
-                    <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign in with Facebook</span> </button>
-                    <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign in with Google+</span> </button>
+    <body style="background-color: #3B5D50">
+
+        <div class="container">
+
+            <!-- Outer Row -->
+            <div class="row justify-content-center">
+
+                <div class="col-xl-10 col-lg-12 col-md-9">
+
+                    <div class="card o-hidden border-0 shadow-lg my-5">
+                        <div class="card-body p-0">
+                            <!-- Nested Row within Card Body -->
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <img src="https://www.junie.vn/cdn/shop/products/day-chuyen-amari-9.jpg?v=1663165946&width=700" alt="Image" class="img-fluid">
+                                </div>
+                                <div class="col-lg-6">
+                                    <div id="logreg-forms">
+                                        <form class="form-signin" action="login" method="post">
+                                            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
+                                            <div class="social-login">
+                                                <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign in with Facebook</span> </button>
+                                                <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign in with Google+</span> </button>
+                                            </div>
+                                            <div class="mess">
+                                                ${mess}
+                                            </div>
+                                            <input name="user" type="text" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus="">
+                                            <input name="pass" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+                                            <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
+                                            <a href="forgotPass.jsp" id="forgot_pswd">Forgot password?</a>
+                                            <hr>
+                                            <a href="signup.jsp" class="btn btn-primary btn-block text-white"><i class="fas fa-user-plus"></i> Sign up New Account</a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="mess">
-                    ${mess}
-                </div>
-                <input name="user" type="text" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus="">
-                <input name="pass" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-                <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
-                <a href="#" id="forgot_pswd">Forgot password?</a>
-                <hr>
-                <a href="signup.jsp" class="btn btn-primary btn-block text-white"><i class="fas fa-user-plus"></i> Sign up New Account</a>
-            </form>
+
+            </div>
+
         </div>
+
     </body>
 </html>
