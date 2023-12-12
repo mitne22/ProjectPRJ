@@ -52,6 +52,10 @@
         <servlet-name>ForgotPassword</servlet-name>
         <servlet-class>controller.ForgotPassword</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ForgotPassController</servlet-name>
+        <servlet-class>controller.ForgotPassController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AddToCartController</servlet-name>
         <url-pattern>/addtocart</url-pattern>
@@ -99,6 +103,10 @@
     <servlet-mapping>
         <servlet-name>ForgotPassword</servlet-name>
         <url-pattern>/forgot</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ForgotPassController</servlet-name>
+        <url-pattern>/forgotpass</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

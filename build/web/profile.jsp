@@ -157,7 +157,7 @@
     </head>
     <body>
         <h1>Update Profile</h1>
-        <form action="updateProfile" method="">
+        <form action="updateProfile" method="post">
             <input type="text" name="id" value="${pro.customerID}" placeholder="CustomerID" readonly required>
             <input type="text" name="name" value="${pro.fullName}" placeholder="Your Name" required">
             <input type="text" name="email" value="${pro.email}" placeholder="Email" required>

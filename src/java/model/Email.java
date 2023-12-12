@@ -15,7 +15,7 @@ public class Email {
     static final String from = "leminhnguyet22072003@gmail.com";
     static final String password = "ufmfvevqqxzpyhot";
     
-    public static boolean sendEmail(String to, String title, String content) {
+    public boolean sendEmail(String to, String title, String content) {
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");
         props.put("mail.smtp.port", "587");
@@ -56,7 +56,7 @@ public class Email {
         }
     }
     
-    public static String generateRandomOTP(int length){
+    public String generateRandomOTP(int length){
         String numbers = "0123456789";
         Random random = new Random();
         char[] pin = new char[length];
@@ -68,9 +68,8 @@ public class Email {
     
     public static void main(String[] args) {
         Email m = new Email();
-        String numberRandom = generateRandomOTP(6);
-        m.sendEmail("nguyetltmhe171230@fpt.edu.vn", "YOUR OTP", "123456");
-        
+        m.generateRandomOTP(6);
+        m.sendEmail("nguyetltmhe171230@fpt.edu.vn", "YOUR OTP", m.generateRandomOTP(6));
     }
     
 }

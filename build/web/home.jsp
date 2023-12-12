@@ -85,7 +85,7 @@
                             <li><a class="nav-link" href="login.jsp">Login </a></li>
                             </c:if>
                         <li><a class="nav-link" href="cart"><img src="images/cart.svg"></a></li>
-                        <li><a class="nav-link" href="loadProfile?id=${sessionScope.acc.uID}"><img src="images/user.svg"></a></li>
+                        <li><a class="nav-link" href="updateProfile?id=${sessionScope.acc.uID}"><img src="images/user.svg"></a></li>
                     </ul>
                 </div>
             </div>

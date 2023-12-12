@@ -32,22 +32,7 @@ public class UpdateProfileController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String id = request.getParameter("id");
-        String name = request.getParameter("name");
-        String email = request.getParameter("email");
-        String phone = request.getParameter("phoneNumber");
-        String address = request.getParameter("address");
-        CustomerDAO cusdao = new CustomerDAO();
-        if (!isValidEmail(email)) {
-            request.setAttribute("fail", "Email invalid!");
-            request.getRequestDispatcher("profile.jsp").forward(request, response);
-        }
-        cusdao.update(name, email, phone, address, id);
-        Customer updatedCustomer = cusdao.getCustomerById(Integer.parseInt(id));
-        request.setAttribute("pro", updatedCustomer);
-
-        request.setAttribute("mess", "Update Successful!");
-        request.getRequestDispatcher("profile.jsp").forward(request, response);
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -62,7 +47,25 @@ public class UpdateProfileController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        HttpSession session = request.getSession();
+        Account userAccount = (Account) session.getAttribute("acc");
+        CustomerDAO cusdao = new CustomerDAO();
+
+        String id = request.getParameter("id");
+
+        if (id != null && id.matches("\\d+")) {
+            int userID = Integer.parseInt(id);
+
+            if (userAccount != null && userAccount.getuID() == userID) {
+                Customer c = cusdao.getCustomerById(userID);
+                request.setAttribute("pro", c);
+                request.getRequestDispatcher("profile.jsp").forward(request, response);
+            } else {
+                response.sendRedirect("login.jsp");
+            }
+        } else {
+             response.sendRedirect("login.jsp");
+        }
     }
 
     /**
@@ -76,7 +79,24 @@ public class UpdateProfileController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        String id = request.getParameter("id");
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String phone = request.getParameter("phoneNumber");
+        String address = request.getParameter("address");
+        CustomerDAO cusdao = new CustomerDAO();
+        if (!isValidEmail(email)) {
+            request.setAttribute("fail", "Email invalid!");
+            request.setAttribute("pro", new Customer(Integer.parseInt(id), name, email, phone, address));
+            request.getRequestDispatcher("profile.jsp").forward(request, response);
+        } else {
+            cusdao.update(name, email, phone, address, id);
+            Customer updatedCustomer = cusdao.getCustomerById(Integer.parseInt(id));
+            request.setAttribute("pro", updatedCustomer);
+        }
+
+        request.setAttribute("mess", "Update Successful!");
+        request.getRequestDispatcher("profile.jsp").forward(request, response);
     }
 
     private boolean isValidEmail(String email) {
