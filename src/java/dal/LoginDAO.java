@@ -59,4 +59,17 @@ public class LoginDAO extends DBContext {
         }
     }
 
+    public void update(String pass, String user) {
+        try {
+            String sql = "UPDATE [dbo].[Account]\n"
+                    + "   SET [pass] = ?\n"
+                    + " WHERE uName = ?";
+            PreparedStatement stm = connection.prepareStatement(sql);
+            stm.setString(1, pass);
+            stm.setString(2, user);
+            stm.executeUpdate();
+        } catch (SQLException e){
+            
+        }
+    }
 }

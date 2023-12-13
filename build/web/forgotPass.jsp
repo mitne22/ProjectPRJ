@@ -43,7 +43,7 @@
                             <!-- Nested Row within Card Body -->
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <img src="https://channel.mediacdn.vn/thumb_w/640/2019/10/14/photo-1-1571065781331448666071.jpg" alt="Image" class="img-fluid">
+                                    <img src="https://channel.mediacdn.vn/thumb_w/640/2019/10/14/photo-1-1571065781331448666071.jpg" alt="Image" class="img-fluid" style="margin-top: 47px">
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="p-5">
@@ -53,6 +53,11 @@
                                                 and we'll send you a link to reset your password!</p>
                                         </div>
                                         <form action="forgotpass" method="post" class="user">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control form-control-user"
+                                                       id="exampleInputEmail" 
+                                                       name="username" placeholder="Enter Username">
+                                            </div>
                                             <div class="form-group">
                                                 <input type="email" class="form-control form-control-user"
                                                        id="exampleInputEmail" aria-describedby="emailHelp"

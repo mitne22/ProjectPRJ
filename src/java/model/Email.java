@@ -12,8 +12,10 @@ import javax.mail.internet.MimeMessage;
 public class Email {
     //password: ufmf vevq qxzp yhot
     
-    static final String from = "leminhnguyet22072003@gmail.com";
-    static final String password = "ufmfvevqqxzpyhot";
+//    static final String from = "leminhnguyet22072003@gmail.com";
+//    static final String password = "ufmfvevqqxzpyhot";
+    static final String from = "nguyetltmhe171230@fpt.edu.vn";
+    static final String password = "dmelznzklkftxvwo";
     
     public boolean sendEmail(String to, String title, String content) {
         Properties props = new Properties();
@@ -42,7 +44,7 @@ public class Email {
             // nguoi nhan
             msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to, false));
             // -------------------
-            msg.setSubject(title);
+            msg.setSubject(title, "UTF-8");
             //--------------------
             msg.setSentDate(new Date());
             // NOI DUNG
@@ -69,7 +71,7 @@ public class Email {
     public static void main(String[] args) {
         Email m = new Email();
         m.generateRandomOTP(6);
-        m.sendEmail("nguyetltmhe171230@fpt.edu.vn", "YOUR OTP", m.generateRandomOTP(6));
+        m.sendEmail("leminhnguyet22072003@gmail.com", "NEW PASSWORD: ", m.generateRandomOTP(6));
     }
     
 }
