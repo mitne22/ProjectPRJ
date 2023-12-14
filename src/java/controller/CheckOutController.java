@@ -5,6 +5,8 @@
 package controller;
 
 import dal.CustomerDAO;
+import dal.OrderDetailsDAO;
+import dal.OrdersDAO;
 import dal.ProductDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -19,6 +21,9 @@ import java.util.Map;
 import model.Account;
 import model.Cart;
 import model.Customer;
+import model.OrderDetails;
+import model.Orders;
+import model.Product;
 
 /**
  *
@@ -67,13 +72,9 @@ public class CheckOutController extends HttpServlet {
         HttpSession session = request.getSession();
         Account userAccount = (Account) session.getAttribute("acc");
         CustomerDAO cusdao = new CustomerDAO();
-
+        
         String id = request.getParameter("id");
-        String fullName = request.getParameter("c_fname");
-        String phoneNumber = request.getParameter("c_companyname");
-        String address = request.getParameter("c_address");
-        String email = request.getParameter("c_email_address");
-
+        
         if (id != null && id.matches("\\d+")) {
             int userID = Integer.parseInt(id);
             
@@ -87,36 +88,34 @@ public class CheckOutController extends HttpServlet {
         } else {
             //response.sendRedirect("login.jsp");
         }
-
         String username = (String) session.getAttribute("user");
-
         HashMap<String, HashMap<Integer, Cart>> userCarts = (HashMap<String, HashMap<Integer, Cart>>) session.getAttribute("userCarts");
-
+        
         if (userCarts != null && userCarts.containsKey(username)) {
-
+            
             HashMap<Integer, Cart> cartMap = userCarts.get(username);
-
+            
             ProductDAO dao = new ProductDAO();
-
+            
             double totalMoney = 0;
             for (Map.Entry<Integer, Cart> entry : cartMap.entrySet()) {
-                int productId = entry.getKey();
+//                int productId = entry.getKey();
                 Cart cart = entry.getValue();
                 int quantity = cart.getQuantity();
                 totalMoney += quantity * cart.getProduct().getPrice() * 1.5;
             }
-
+            
             request.setAttribute("totalMoney", totalMoney);
             request.setAttribute("dao", dao);
             request.setAttribute("cart", cartMap);
         } else {
-
+            
             request.setAttribute("totalMoney", 0);
             request.setAttribute("dao", new ProductDAO());
             request.setAttribute("cart", new HashMap<Integer, Cart>());
         }
+        request.setAttribute("cart", new HashMap<Integer, Cart>());
         request.getRequestDispatcher("checkout.jsp").forward(request, response);
-
     }
 
     /**
@@ -131,7 +130,65 @@ public class CheckOutController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        HttpSession session = request.getSession();
+        Account userAccount = (Account) session.getAttribute("acc");
+        CustomerDAO cusdao = new CustomerDAO();
+        
+        String username = (String) session.getAttribute("user");
+        
+        HashMap<String, HashMap<Integer, Cart>> userCarts
+                = (HashMap<String, HashMap<Integer, Cart>>) session.getAttribute("userCarts");
 
+        //update database
+        if (userCarts != null && userCarts.containsKey(username)) {
+            
+            HashMap<Integer, Cart> cartMap = userCarts.get(username);
+            
+            ProductDAO productdao = new ProductDAO();
+            
+            double totalMoney = 0;
+            for (Map.Entry<Integer, Cart> entry : cartMap.entrySet()) {
+                Cart cart = entry.getValue();
+                int quantity = cart.getQuantity();
+                totalMoney += quantity * cart.getProduct().getPrice() * 1.5;
+            }
+            
+            Orders order = new Orders();
+            order.setOrderDate(new java.sql.Date(System.currentTimeMillis()));
+            order.setTotalPrices(totalMoney);
+            order.setCustomerID(userAccount.getuID());
+       
+            OrdersDAO ordersDAO = new OrdersDAO();
+            int orderId = ordersDAO.create(order);
+            
+            OrderDetailsDAO orderDetailsDAO = new OrderDetailsDAO();
+            for (Map.Entry<Integer, Cart> entry : cartMap.entrySet()) {
+                Cart cart = entry.getValue();
+                Product product = cart.getProduct();
+                int quantity = cart.getQuantity();
+                
+                OrderDetails orderDetails = new OrderDetails();
+                orderDetails.setOrderID(orderId);
+                orderDetails.setpID(product.getpID());
+                orderDetails.setQuantityOrder(quantity);
+                orderDetails.setPrice(product.getPrice());
+                
+                orderDetailsDAO.create(orderDetails);
+                
+                product.setQuantity(product.getQuantity() - quantity);
+                productdao.updateQuantity(product);
+            }
+            
+            request.setAttribute("totalMoney", totalMoney);
+            request.setAttribute("dao", productdao);
+            request.setAttribute("cart", cartMap);
+        } else {
+            
+            request.setAttribute("totalMoney", 0);
+            request.setAttribute("dao", new ProductDAO());
+            request.setAttribute("cart", new HashMap<Integer, Cart>());
+        }
+        request.getRequestDispatcher("thankyou.jsp").forward(request, response);
     }
 
     /**

@@ -87,19 +87,16 @@ public class RemoveFromCartController extends HttpServlet {
         HttpSession session = request.getSession();
         String username = (String) session.getAttribute("user");
 
-// Lấy giỏ hàng của người dùng từ userCarts
         HashMap<String, HashMap<Integer, Cart>> userCarts = (HashMap<String, HashMap<Integer, Cart>>) session.getAttribute("userCarts");
 
         if (userCarts != null && userCarts.containsKey(username)) {
             HashMap<Integer, Cart> cartMap = userCarts.get(username);
 
-            // Xóa sản phẩm khỏi giỏ hàng dựa trên pid
             int pid_int = Integer.parseInt(pid);
             if (cartMap.containsKey(pid_int)) {
                 cartMap.remove(pid_int);
             }
 
-            // Cập nhật giỏ hàng của người dùng
             userCarts.put(username, cartMap);
             session.setAttribute("userCarts", userCarts);
         }

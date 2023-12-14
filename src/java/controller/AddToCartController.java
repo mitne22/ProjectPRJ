@@ -17,7 +17,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Vector;
 import model.Cart;
 import model.Product;
 
@@ -101,7 +100,6 @@ public class AddToCartController extends HttpServlet {
 //        Cookie cookieCart = new Cookie("cart", cartStr);
 //        response.addCookie(cookieCart);
 //        response.sendRedirect("shop");
-        // Kiểm tra xem người dùng đã đăng nhập hay chưa
         HttpSession session = request.getSession();
         String username = (String) session.getAttribute("user");
 
@@ -114,10 +112,8 @@ public class AddToCartController extends HttpServlet {
         String pid = request.getParameter("pID");
         int pid_int = Integer.parseInt(pid);
 
-// Lấy hoặc tạo giỏ hàng của người dùng
         HashMap<Integer, Cart> cart = userCarts.getOrDefault(username, new HashMap<>());
 
-// Thêm hoặc cập nhật giỏ hàng của người dùng
         if (cart.containsKey(pid_int)) {
             int oldQuantity = cart.get(pid_int).getQuantity();
             cart.get(pid_int).setQuantity(oldQuantity + 1);
@@ -125,11 +121,10 @@ public class AddToCartController extends HttpServlet {
             cart.put(pid_int, new Cart(dao.getProductById(pid), 1));
         }
 
-// Lưu lại giỏ hàng của người dùng trong userCarts
         userCarts.put(username, cart);
         session.setAttribute("userCarts", userCarts);
 
-// Tạo cookie để lưu giỏ hàng (nếu cần)
+//cookie
         String cartStr = "";
         for (Map.Entry<Integer, Cart> entry : cart.entrySet()) {
             int productId = entry.getKey();

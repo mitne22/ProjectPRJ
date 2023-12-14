@@ -14,6 +14,10 @@ public class OrderDetails {
     int quantityOrder;
     double price;
 
+    public OrderDetails() {
+    }
+    
+    
     public OrderDetails(int orderID, int pID, int quantityOrder, double price) {
         this.orderID = orderID;
         this.pID = pID;

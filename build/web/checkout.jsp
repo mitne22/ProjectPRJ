@@ -92,7 +92,7 @@
                     <div class="col-md-6 mb-5 mb-md-0">
                         <h2 class="h3 mb-3 text-black">Customer's Information</h2>
                         <div class="p-3 p-lg-5 border bg-white">
-                            <form action = "checkout?id=${sessionScope.acc.uID}">
+                            <form action = "checkout?id=${sessionScope.acc.uID}" id="checkoutForm" method="POST">
                                 <div class="form-group row">
                                     <div class="col-md-6">
                                         <label for="c_fname" class="text-black">Name <span class="text-danger">*</span></label>
@@ -186,7 +186,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <button class="btn btn-black btn-lg py-3 btn-block" onclick="window.location = 'thankyou.jsp'">Place Order</button>
+                                        <button class="btn btn-black btn-lg py-3 btn-block" onclick="submitCheckoutForm()">Place Order</button>
                                     </div>
 
                                 </div>
@@ -303,7 +303,12 @@
             </div>
         </footer>
         <!-- End Footer Section -->	
-
+        
+        <script>
+            function submitCheckoutForm() {
+                document.getElementById('checkoutForm').submit();
+            }
+        </script>
 
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/tiny-slider.js"></script>

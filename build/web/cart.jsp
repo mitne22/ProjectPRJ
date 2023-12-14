@@ -180,7 +180,8 @@
 
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <button class="btn btn-black btn-lg py-3 btn-block" onclick="window.location = 'checkout?id=${sessionScope.acc.uID}'">Proceed To Checkout</button>
+                                        <a class="btn btn-black btn-lg py-3 btn-block" 
+                                                href="checkout?id=${sessionScope.acc.uID}">Proceed To Checkout</a>
                                     </div>
                                 </div>
                             </div>

@@ -229,6 +229,21 @@ public class ProductDAO extends DBContext {
         }
         return list;
     }
+    
+    public void updateQuantity(Product product) {
+        try {
+            String sql = "UPDATE [dbo].[Product]\n"
+                    + "   SET [quantity] = ?\n"
+                    + " WHERE pID = ?";
+            PreparedStatement stm = connection.prepareStatement(sql);
+            stm.setObject(1, product.getQuantity());
+            stm.setObject(2, product.getpID());
+            stm.executeUpdate();
+
+        } catch (SQLException ex) {
+
+        }
+    }
 
     public static void main(String[] args) {
         ProductDAO dao = new ProductDAO();
