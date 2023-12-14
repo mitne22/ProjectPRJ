@@ -37,19 +37,14 @@ public class Email {
         // Gui mail
         MimeMessage msg = new MimeMessage(session);
         try {
-            // kieu noi dung
             msg.addHeader("Content-type", "text/HTML; charset=UTF-8");
-            // Nguoi gui
             msg.setFrom(from);
-            // nguoi nhan
             msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to, false));
             // -------------------
             msg.setSubject(title, "UTF-8");
             //--------------------
             msg.setSentDate(new Date());
-            // NOI DUNG
             msg.setContent(content, "text/html");
-            // Gui mail
             Transport.send(msg);
             return true;
         } catch (Exception e) {

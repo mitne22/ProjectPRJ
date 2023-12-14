@@ -2,6 +2,17 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/D:/Ki_4/PRJ301_Bl5/ProjectPRJ/src/java/controller/AddToCartController.java</file>
+            <file>file:/D:/Ki_4/PRJ301_Bl5/ProjectPRJ/src/java/controller/CartController.java</file>
+            <file>file:/D:/Ki_4/PRJ301_Bl5/ProjectPRJ/src/java/controller/UpdateProfileController.java</file>
+            <file>file:/D:/Ki_4/PRJ301_Bl5/ProjectPRJ/src/java/dal/CustomerDAO.java</file>
+            <file>file:/D:/Ki_4/PRJ301_Bl5/ProjectPRJ/src/java/model/Email.java</file>
+            <file>file:/D:/Ki_4/PRJ301_Bl5/ProjectPRJ/src/java/controller/UpdateCartController.java</file>
+            <file>file:/D:/Ki_4/PRJ301_Bl5/ProjectPRJ/web/profile.jsp</file>
+            <file>file:/D:/Ki_4/PRJ301_Bl5/ProjectPRJ/src/java/controller/CheckOutController.java</file>
+            <file>file:/D:/Ki_4/PRJ301_Bl5/ProjectPRJ/web/cart.jsp</file>
+            <file>file:/D:/Ki_4/PRJ301_Bl5/ProjectPRJ/src/java/dal/LoginDAO.java</file>
+        </group>
     </open-files>
 </project-private>

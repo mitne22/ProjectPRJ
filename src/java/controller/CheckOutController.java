@@ -72,12 +72,17 @@ public class CheckOutController extends HttpServlet {
         HttpSession session = request.getSession();
         Account userAccount = (Account) session.getAttribute("acc");
         CustomerDAO cusdao = new CustomerDAO();
-        
+
+        if (userAccount == null) {
+            response.sendRedirect("login.jsp");
+            return;
+        }
+
         String id = request.getParameter("id");
-        
+
         if (id != null && id.matches("\\d+")) {
             int userID = Integer.parseInt(id);
-            
+
             if (userAccount != null && userAccount.getuID() == userID) {
                 Customer c = cusdao.getCustomerById(userID);
                 request.setAttribute("pro", c);
@@ -90,13 +95,13 @@ public class CheckOutController extends HttpServlet {
         }
         String username = (String) session.getAttribute("user");
         HashMap<String, HashMap<Integer, Cart>> userCarts = (HashMap<String, HashMap<Integer, Cart>>) session.getAttribute("userCarts");
-        
+
         if (userCarts != null && userCarts.containsKey(username)) {
-            
+
             HashMap<Integer, Cart> cartMap = userCarts.get(username);
-            
+
             ProductDAO dao = new ProductDAO();
-            
+
             double totalMoney = 0;
             for (Map.Entry<Integer, Cart> entry : cartMap.entrySet()) {
 //                int productId = entry.getKey();
@@ -104,12 +109,12 @@ public class CheckOutController extends HttpServlet {
                 int quantity = cart.getQuantity();
                 totalMoney += quantity * cart.getProduct().getPrice() * 1.5;
             }
-            
+
             request.setAttribute("totalMoney", totalMoney);
             request.setAttribute("dao", dao);
             request.setAttribute("cart", cartMap);
         } else {
-            
+
             request.setAttribute("totalMoney", 0);
             request.setAttribute("dao", new ProductDAO());
             request.setAttribute("cart", new HashMap<Integer, Cart>());
@@ -133,57 +138,57 @@ public class CheckOutController extends HttpServlet {
         HttpSession session = request.getSession();
         Account userAccount = (Account) session.getAttribute("acc");
         CustomerDAO cusdao = new CustomerDAO();
-        
+
         String username = (String) session.getAttribute("user");
-        
+
         HashMap<String, HashMap<Integer, Cart>> userCarts
                 = (HashMap<String, HashMap<Integer, Cart>>) session.getAttribute("userCarts");
 
         //update database
         if (userCarts != null && userCarts.containsKey(username)) {
-            
+
             HashMap<Integer, Cart> cartMap = userCarts.get(username);
-            
+
             ProductDAO productdao = new ProductDAO();
-            
+
             double totalMoney = 0;
             for (Map.Entry<Integer, Cart> entry : cartMap.entrySet()) {
                 Cart cart = entry.getValue();
                 int quantity = cart.getQuantity();
                 totalMoney += quantity * cart.getProduct().getPrice() * 1.5;
             }
-            
+
             Orders order = new Orders();
             order.setOrderDate(new java.sql.Date(System.currentTimeMillis()));
             order.setTotalPrices(totalMoney);
             order.setCustomerID(userAccount.getuID());
-       
+
             OrdersDAO ordersDAO = new OrdersDAO();
             int orderId = ordersDAO.create(order);
-            
+
             OrderDetailsDAO orderDetailsDAO = new OrderDetailsDAO();
             for (Map.Entry<Integer, Cart> entry : cartMap.entrySet()) {
                 Cart cart = entry.getValue();
                 Product product = cart.getProduct();
                 int quantity = cart.getQuantity();
-                
+
                 OrderDetails orderDetails = new OrderDetails();
                 orderDetails.setOrderID(orderId);
                 orderDetails.setpID(product.getpID());
                 orderDetails.setQuantityOrder(quantity);
                 orderDetails.setPrice(product.getPrice());
-                
+
                 orderDetailsDAO.create(orderDetails);
-                
+
                 product.setQuantity(product.getQuantity() - quantity);
                 productdao.updateQuantity(product);
             }
-            
+
             request.setAttribute("totalMoney", totalMoney);
             request.setAttribute("dao", productdao);
             request.setAttribute("cart", cartMap);
         } else {
-            
+
             request.setAttribute("totalMoney", 0);
             request.setAttribute("dao", new ProductDAO());
             request.setAttribute("cart", new HashMap<Integer, Cart>());

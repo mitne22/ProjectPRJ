@@ -59,6 +59,21 @@ public class LoginDAO extends DBContext {
         }
     }
 
+    public int getUIDByUsername(String user) {
+        String sql = "SELECT uID FROM Account WHERE uName = ?";
+        try {
+            PreparedStatement stm = connection.prepareStatement(sql);
+            stm.setString(1, user);
+            ResultSet rs = stm.executeQuery();
+            while (rs.next()) {
+                return rs.getInt(1);
+            }
+        } catch (SQLException e) {
+
+        }
+        return -1;
+    }
+
     public void update(String pass, String user) {
         try {
             String sql = "UPDATE [dbo].[Account]\n"
@@ -68,8 +83,9 @@ public class LoginDAO extends DBContext {
             stm.setString(1, pass);
             stm.setString(2, user);
             stm.executeUpdate();
-        } catch (SQLException e){
-            
+        } catch (SQLException e) {
+
         }
     }
+
 }

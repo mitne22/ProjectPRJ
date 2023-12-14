@@ -69,4 +69,27 @@ public class CustomerDAO extends DBContext {
         }
     }
 
+    public void insert(String name, String email, String phoneNumber, String address) {
+        try {
+            String sql = "INSERT INTO [dbo].[Customer]\n"
+                    + "           ([fullName]\n"
+                    + "           ,[email]\n"
+                    + "           ,[phoneNumber]\n"
+                    + "           ,[address])\n"
+                    + "     VALUES\n"
+                    + "           (?\n"
+                    + "           ,?\n"
+                    + "           ,?\n"
+                    + "           ,?)";
+            PreparedStatement stm = connection.prepareStatement(sql);
+            stm.setString(1, name);
+            stm.setString(2, email);
+            stm.setString(3, phoneNumber);
+            stm.setString(4, address);
+            stm.executeUpdate();
+        } catch (SQLException ex) {
+           
+        }
+    }
+
 }

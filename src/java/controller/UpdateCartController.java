@@ -108,16 +108,13 @@ public class UpdateCartController extends HttpServlet {
         String action = request.getParameter("action");
         HttpSession session = request.getSession();
 
-// Lấy giỏ hàng của người dùng từ session
         String username = (String) session.getAttribute("user");
         HashMap<String, HashMap<Integer, Cart>> userCarts = (HashMap<String, HashMap<Integer, Cart>>) session.getAttribute("userCarts");
 
         if (userCarts != null && userCarts.containsKey(username)) {
-            // Lấy giỏ hàng của tài khoản đăng nhập
             HashMap<Integer, Cart> cartMap = userCarts.get(username);
             ProductDAO dao = new ProductDAO();
 
-            // Tìm sản phẩm trong giỏ hàng và cập nhật số lượng
             int productId = Integer.parseInt(pid);
             if (cartMap.containsKey(productId)) {
                 Cart cart = cartMap.get(productId);
@@ -128,26 +125,21 @@ public class UpdateCartController extends HttpServlet {
                     if (quantity > 1) {
                         quantity--;
                     } else {
-                        // Nếu số lượng là 1 và người dùng muốn giảm, hãy xóa sản phẩm ra khỏi giỏ hàng
                         cartMap.remove(productId);
                     }
                 }
                 cart.setQuantity(quantity);
             }
 
-            // Tính lại tổng tiền trong giỏ hàng sau cập nhật
             double totalMoney = 0;
             for (Cart cart : cartMap.values()) {
                 totalMoney += cart.getQuantity() * cart.getProduct().getPrice() * 1.5;
             }
 
-            // Lưu lại giỏ hàng và tổng tiền vào session
             userCarts.put(username, cartMap);
             session.setAttribute("userCarts", userCarts);
             session.setAttribute("totalMoney", totalMoney);
         }
-
-// Chuyển hướng người dùng đến trang giỏ hàng sau khi cập nhật
         response.sendRedirect("cart");
 
     }

@@ -5,6 +5,7 @@
 package controller;
 
 import dal.CustomerDAO;
+import dal.LoginDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -32,7 +33,7 @@ public class UpdateProfileController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -64,7 +65,7 @@ public class UpdateProfileController extends HttpServlet {
                 response.sendRedirect("login.jsp");
             }
         } else {
-             response.sendRedirect("login.jsp");
+            response.sendRedirect("login.jsp");
         }
     }
 
@@ -79,7 +80,11 @@ public class UpdateProfileController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String id = request.getParameter("id");
+        HttpSession session = request.getSession();
+        String username = (String) session.getAttribute("user");
+        LoginDAO logindao = new LoginDAO();
+        int id = logindao.getUIDByUsername(username);
+
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String phone = request.getParameter("phoneNumber");
@@ -87,12 +92,22 @@ public class UpdateProfileController extends HttpServlet {
         CustomerDAO cusdao = new CustomerDAO();
         if (!isValidEmail(email)) {
             request.setAttribute("fail", "Email invalid!");
-            request.setAttribute("pro", new Customer(Integer.parseInt(id), name, email, phone, address));
+            request.setAttribute("pro", new Customer(id, name, email, phone, address));
             request.getRequestDispatcher("profile.jsp").forward(request, response);
         } else {
-            cusdao.update(name, email, phone, address, id);
-            Customer updatedCustomer = cusdao.getCustomerById(Integer.parseInt(id));
+            Customer existCustomer = cusdao.getCustomerById(id);
+
+            if (existCustomer != null) {
+                cusdao.update(name, email, phone, address, String.valueOf(id));
+            } else {
+                cusdao.insert(name, email, phone, address);
+            }
+
+            Customer updatedCustomer = cusdao.getCustomerById(id);
             request.setAttribute("pro", updatedCustomer);
+//            cusdao.update(name, email, phone, address, String.valueOf(id));
+//            Customer updatedCustomer = cusdao.getCustomerById(id);
+//            request.setAttribute("pro", updatedCustomer);
         }
 
         request.setAttribute("mess", "Update Successful!");

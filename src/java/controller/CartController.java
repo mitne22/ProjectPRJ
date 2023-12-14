@@ -81,12 +81,9 @@ public class CartController extends HttpServlet {
         HttpSession session = request.getSession();
         String username = (String) session.getAttribute("user");
 
-        // Lấy HashMap userCarts từ session
         HashMap<String, HashMap<Integer, Cart>> userCarts = (HashMap<String, HashMap<Integer, Cart>>) session.getAttribute("userCarts");
 
-        // Kiểm tra xem có giỏ hàng cho tài khoản đăng nhập không
         if (userCarts != null && userCarts.containsKey(username)) {
-            // Lấy giỏ hàng của tài khoản đăng nhập
             HashMap<Integer, Cart> cartMap = userCarts.get(username);
 
             ProductDAO dao = new ProductDAO();
@@ -103,8 +100,7 @@ public class CartController extends HttpServlet {
             request.setAttribute("dao", dao);
             request.setAttribute("cart", cartMap);
         } else {
-            // Không có giỏ hàng cho tài khoản đăng nhập
-            request.setAttribute("totalMoney", 0); // hoặc giá trị mặc định khác
+            request.setAttribute("totalMoney", 0); 
             request.setAttribute("dao", new ProductDAO());
             request.setAttribute("cart", new HashMap<Integer, Cart>());
         }
